@@ -1,0 +1,54 @@
+
+>
+java:S2189™""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ
+k	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÜô‰şÿÿÿÿ
+f	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óòÌç
+l	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Çà»ÿÿÿÿÿ
+l	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›æ›»úÿÿÿÿ
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÂ”•
+l	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò­¹ÿÿÿÿÿ
+l	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÁæÎÿÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı©±şÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ı‡”ÿÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÃ¯äûÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óßĞ¡ÿÿÿÿÿ
+l	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¼Ë¬ûÿÿÿÿ
+g	java:S117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‰©
+g	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùĞ³ÿ
+l	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º•¸Ãıÿÿÿÿ
+l	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÙÇ…ıÿÿÿÿ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø­—ôùÿÿÿÿ
+>
+java:S16043"(Make this anonymous inner class a lambda(Æ§¬è
+>
+java:S1604D"(Make this anonymous inner class a lambda(Ê„‹Á
+>
+java:S1604S"(Make this anonymous inner class a lambda(öï£¼
+C
+java:S1604\"(Make this anonymous inner class a lambda(ÖÌù½üÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+a	java:S116	"LRename this field "L" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¾Ñ¦
+o	java:S116"URename this field "theta_next" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ªıÊùÿÿÿÿ
+j	java:S116"URename this field "omega_next" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áêÓä
+j	java:S116"URename this field "alpha_next" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÕí´
+k	java:S116"QRename this field "t_next" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹âàŠıÿÿÿÿ
+I
+java:S2387"."width" is the name of a field in "Component".(Š¸¹Èÿÿÿÿÿ
+E
+java:S2387"/"height" is the name of a field in "Component".(“ŸóÁ
+U
+java:S1161w":Add the "@Override" annotation above this method signature(†§şıÿÿÿÿ
+h
+java:S1854"LRemove this useless assignment to local variable "initial_angle_in_degrees".(óßĞ¡ÿÿÿÿÿ
+R	java:S125¦"<This block of commented-out lines of code should be removed.(Œù›ò
+W	java:S125»"<This block of commented-out lines of code should be removed.(ı±Àçüÿÿÿÿ
+]
+java:S2142Ã"FEither re-interrupt this method or rethrow the "InterruptedException".(Ú¾ÓÄ
+?	java:S108Ã")Either remove or fill this block of code.(Ú¾ÓÄ
+Q
+java:S1161É":Add the "@Override" annotation above this method signature(¶øÂÁ
+Q
+java:S1161â":Add the "@Override" annotation above this method signature(æìÑº
+Y
+java:S1481"=Remove this unused "initial_angle_in_degrees" local variable.(óßĞ¡ÿÿÿÿÿ
