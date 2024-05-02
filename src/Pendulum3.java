@@ -27,7 +27,7 @@ class Pendulum3 extends Canvas implements Runnable{
 
         // initialise
         setSize(width,height);
-        JFrame pictureFrame = new JFrame("Driven, Damped Pendulum");
+        JFrame pictureFrame = new JFrame("2D Pendulum");
         pictureFrame.setPreferredSize(new Dimension(width, height));
         Panel canvasPanel = new Panel();
         canvasPanel.add(this); // add the Canvas to the Panel
