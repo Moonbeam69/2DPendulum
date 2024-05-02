@@ -10,7 +10,7 @@ class Pendulum3 extends Canvas implements Runnable{
     private double      L = 30d;
     private double      g = 9.81d;
     private double      c = 0.02d;
-    private  double     driveAmpl = 0.0d;
+    private double      driveAmpl = 0.0d;
     private double      driveFreq = 2d/3d;
     private Scrollbar   sb1;
     private Scrollbar   sb2;
@@ -25,14 +25,11 @@ class Pendulum3 extends Canvas implements Runnable{
 
     Pendulum3() {
 
-        running = false;
-
-        setSize(width,height); // the Canvas is 400 pixels square
+        // initialise
+        setSize(width,height);
         JFrame pictureFrame = new JFrame("Driven, Damped Pendulum");
         pictureFrame.setPreferredSize(new Dimension(width, height));
-
         Panel canvasPanel = new Panel();
-
         canvasPanel.add(this); // add the Canvas to the Panel
         pictureFrame.add(canvasPanel);
 
