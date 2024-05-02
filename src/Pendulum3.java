@@ -4,24 +4,24 @@ import java.awt.event.*;
 import java.text.*;
 
 class Pendulum3 extends Canvas implements Runnable{
-    private double theta;
-    private int width=1000;
-    private int height=1000;
-    private double L = 30d;
-    private double g = 9.81d;
-    private double c = 0.02d;
-    private  double driveAmpl = 0.0d;
-    private double driveFreq = 2d/3d;
-    private Scrollbar sb1;
-    private Scrollbar sb2;
-    private Scrollbar sb3;
-    boolean running;
-    double t;
+    private double      theta;
+    private int         width=1000;
+    private int         height=1000;
+    private double      L = 30d;
+    private double      g = 9.81d;
+    private double      c = 0.02d;
+    private  double     driveAmpl = 0.0d;
+    private double      driveFreq = 2d/3d;
+    private Scrollbar   sb1;
+    private Scrollbar   sb2;
+    private Scrollbar   sb3;
+    boolean             running = false;
+    double              t;
     // initialise pendulum
-    double theta_next; // angle [rad].  positive counter-clockwise, down = 0rad
-    double omega_next; // angular velocity [rad/s]
-    double alpha_next; // angular acceleration [rad/s^2]
-    double t_next; // time [s]
+    double              theta_next; // angle [rad].  positive counter-clockwise, down = 0rad
+    double              omega_next; // angular velocity [rad/s]
+    double              alpha_next; // angular acceleration [rad/s^2]
+    double              t_next;
 
     Pendulum3() {
 
@@ -133,22 +133,16 @@ class Pendulum3 extends Canvas implements Runnable{
     public void run() {
         double dt = 0.01d; // time step. Less is more accurate, more computational
 
-        double theta_mid; // Runge-Kutta angle
-        double omega_mid; // Runge-Kutta angular velocity
+        double theta_mid;   // Runge-Kutta angle
+        double omega_mid;   // Runge-Kutta angular velocity
         double alpha_mid;
-        double t_mid; // Runge-Kutta angular velocity
+        double t_mid;       // Runge-Kutta angular velocity
 
-        double theta_prev; // angle
-        double omega_prev; // angular velocity
-        double alpha_prev; // angular acceleration
-        double t_prev; // time
+        double theta_prev = Math.toRadians(125d);;  // angle
+        double omega_prev = 0d;  // angular velocity
+        double alpha_prev = 0d;  // angular acceleration
+        double t_prev     = 0d;  // time
         double initial_angle_in_degrees = 125d;
-
-        alpha_prev = 0d;
-        omega_prev = 0d;
-        theta_prev = Math.toRadians(125d);
-        t_prev = 0d;
-
         theta = theta_prev;
 
         while (true) {
@@ -162,28 +156,21 @@ class Pendulum3 extends Canvas implements Runnable{
                     theta_mid = theta_prev + omega_prev * dt * .5d;
                     t_mid = t_prev + .5d * dt;
 
-                    // Normal alpha, omega and theta calculation based on dt intervals
-                    // alpha_next is derived from physics. angular speed and position follow from integration
-/*                    alpha_next = -g / L * Math.sin(theta_prev) - c * omega_prev + driveAmpl * Math.sin(driveFreq * t_prev);
-                    omega_next = omega_prev + alpha_prev * dt;
-                    theta_next = theta_prev + omega_prev * dt;
-                    t_next = t_prev + dt;*/
-
                     // Runge Kutta
-                    alpha_next = -g / L * Math.sin(theta_mid) - c * omega_mid + driveAmpl * Math.sin(driveFreq * t_mid);
-                    omega_next = omega_mid + alpha_mid * .5d * dt;
-                    theta_next = theta_mid + omega_mid * .5d * dt;
-                    t_next = t_mid + .5d * dt;
+                    alpha_next  = -g / L * Math.sin(theta_mid) - c * omega_mid + driveAmpl * Math.sin(driveFreq * t_mid);
+                    omega_next  = omega_mid + alpha_mid * .5d * dt;
+                    theta_next  = theta_mid + omega_mid * .5d * dt;
+                    t_next      = t_mid + .5d * dt;
 
-                    alpha_prev = alpha_next;
-                    omega_prev = omega_next;
-                    theta_prev = theta_next;
-                    t_prev = t_next;
+                    alpha_prev  = alpha_next;
+                    omega_prev  = omega_next;
+                    theta_prev  = theta_next;
+                    t_prev      = t_next;
 
                     // update torque drive and damping constants from GUI
-                    this.driveAmpl = sb1.getValue() / 100d;
-                    this.driveFreq = sb2.getValue() / 100d;
-                    this.c = sb3.getValue() / 500d;
+                    this.driveAmpl  = sb1.getValue() / 100d;
+                    this.driveFreq  = sb2.getValue() / 100d;
+                    this.c          = sb3.getValue() / 500d;
 
                     theta = theta_next; // assign theta for the paint method;
                     t = t_prev;
@@ -192,7 +179,7 @@ class Pendulum3 extends Canvas implements Runnable{
                }
 
 
-                // pause the run thread a bit so the paint method has a chance to catchup
+                // pause the run thread so the paint method has a chance to catchup
                 try {Thread.sleep(20);} catch (InterruptedException e) {}
             }
         }
