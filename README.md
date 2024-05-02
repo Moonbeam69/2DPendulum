@@ -1,3 +1,3 @@
 ### Pendulum 
 
-Simple class that simluates a 2D pendulum with both torque and damping
+Simple class that simulates a 2D pendulum with both torque and damping.
